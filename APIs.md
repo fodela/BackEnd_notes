@@ -102,3 +102,14 @@ You may be unsure what the difference is between a URI (Universal Resource Ident
 The term URI can refer to any identifier for a resource—for example, it could be either the name of a resource or the address of a resource (since both the name and address are identifiers of that resource). In contrast, URL only refers to the location of a resource—in other words, it only ever refers to an address.
 
 So, "URI" could refer to a name or an address, while "URL" only refers to an address. Thus, URLs are a specific type of URI that is used to locate a resource on the internet when a client makes a request to a server.
+
+#### HTTP Request Elements
+
+HTTP requests are sent from the client to the server to initiate some operation. In addition to the URL, HTTP requests have other elements to specify the requested resource.
+Elements:
+
+- Method: Defines the operation to be performed
+- Path: The URL of the resource to be fetched, excluding the scheme and host
+- HTTP Version
+- Headers: optional information, such as Accept-Language
+- Body: optional information, usually for methods such as POST and PATCH, which contain the resource being sent to the server
