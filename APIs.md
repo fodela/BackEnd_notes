@@ -72,3 +72,20 @@ REST stands for Representational State Transfer, which is an architectural style
 
 Why RESTful are stateless?
 It might appear easier to design a server that isn't stateless. There is a reason why RESTful web servers are not allowed to remember anything about the previous requests that the user has sent. In short, stateless servers make your applications scalable.
+
+### Introduction to HTTP
+
+**Features**
+
+- Connectionless: When a request is sent, the client opens the connection; once a response is received, the client closes the connection. The client and server only maintain a connection during the response and request. Future responses are made on a new connection.
+- Stateless: There is no dependency between successive requests.
+- Not Sessionless: Utilizing headers and cookies, sessions can be created to allow each HTTP request to share the same context.
+- Media Independent: Any type of data can be sent over HTTP as long as both the client and server know how to handle the data format. In our case, we'll use JSON.-
+
+**Elements:**
+
+- Universal Resource Identifiers (URIs): An example URI is `http://www.example.com/tasks/term=homework.` It has certain components:
+  - Scheme: specifies the protocol used to access the resource, HTTP or HTTPS. In our example http.
+  - Host: specifies the host that holds the resources. In our example www.example.com.
+  - Path: specifies the specific resource being requested. In our example, /tasks.
+  - Query: an optional component, the query string provides information the resource can use for some purpose such as a search parameter. In our example, /term=homework.
