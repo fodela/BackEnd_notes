@@ -28,6 +28,24 @@ Frequently used APIs are
 
 #### Internet Protocols (IPs)
 
+**IP made simpler**
+
+- Say we want to send an email to someone.
+- Our language (english) must be translated into computer language (binary -> 1010001).
+- This translation is handle in the computer by the separate modules in the communication protocols (rule of conducts)
+- Because this protocols usually communicate with 2 or more modules, they are best described as layers in a stack of protocols.
+- There are 5 layers namely:
+
+The messages we send are through this layers and broken down into small chunks of data called packets
+
+1. Application layer => Creates our message. An example of protocol here is HTTP (hypertext transfer protocol )
+2. Transport layer => Uses the Transmission Control layer or TCP to encapsulate the data block from the application layer which then moves to
+3. Internet layer => Where Internet protocol (IP) delivers the packets. This packets are delivered through the
+4. Link layer => an Ethernet cable to the
+5. Physical layer => the basic hardware of your computer network.
+
+The computer that receives these data packets moves them through the protocol stack in a reversed order so that the message can be interpreted and understood.
+
 Internet communications are governed on multiple levels by internet protocols.
 
 Internet Protocol (IP) is the protocol for sending data from one computer to another across the internet. Each computer must have a unique IP address that identifies it from all other computers connected to the internet.
