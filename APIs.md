@@ -25,3 +25,17 @@ Frequently used APIs are
 3. Assuming the request is formatted correctly, the server queries the database for the information or performs the action in the request
 4. The server formats the response and sends it back to the client
 5. The client renders the response according to its implementation
+
+#### Internet Protocols (IPs)
+
+Internet communications are governed on multiple levels by internet protocols.
+
+Internet Protocol (IP) is the protocol for sending data from one computer to another across the internet. Each computer must have a unique IP address that identifies it from all other computers connected to the internet.
+
+There are many other internet protocols including:
+
+Transmission Control Protocol (TCP) which is used for data transmission
+Hypertext Transmission Protocol (HTTP) which is used for transmitting text and hyperlinks
+File Transfer Protocol (FTP) which is used to transfer files between server and client
+
+Our API will transmit data to our client via HTTP so we will primarily focus on that protocol.
