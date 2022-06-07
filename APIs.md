@@ -85,7 +85,12 @@ It might appear easier to design a server that isn't stateless. There is a reaso
 **Elements:**
 
 - Universal Resource Identifiers (URIs): An example URI is `http://www.example.com/tasks/term=homework.` It has certain components:
+
   - Scheme: specifies the protocol used to access the resource, HTTP or HTTPS. In our example http.
   - Host: specifies the host that holds the resources. In our example www.example.com.
   - Path: specifies the specific resource being requested. In our example, /tasks.
   - Query: an optional component, the query string provides information the resource can use for some purpose such as a search parameter. In our example, /term=homework.
+
+- Messages: Requests and Responses
+
+-Status Codes (e.g 404 NOT FOUND): gives us feedback on the request or response. Thus was it successful or was there an error.
