@@ -94,3 +94,11 @@ It might appear easier to design a server that isn't stateless. There is a reaso
 - Messages: Requests and Responses
 
 -Status Codes (e.g 404 NOT FOUND): gives us feedback on the request or response. Thus was it successful or was there an error.
+
+#### URI vs URL
+
+You may be unsure what the difference is between a URI (Universal Resource Identifier) and a URL (Universal Resource Locator). These terms tend to get confused a lot, and are even frequently used interchangeably—but there is a distinction.
+
+The term URI can refer to any identifier for a resource—for example, it could be either the name of a resource or the address of a resource (since both the name and address are identifiers of that resource). In contrast, URL only refers to the location of a resource—in other words, it only ever refers to an address.
+
+So, "URI" could refer to a name or an address, while "URL" only refers to an address. Thus, URLs are a specific type of URI that is used to locate a resource on the internet when a client makes a request to a server.
