@@ -124,3 +124,32 @@ Different request methods indicate different operations to be performed. It's es
 - PATCH: Partially modifies the representation of the target resource with the request data. e.g It will update your name in the profile without erasing your profile picture. Best for updating the database.
 - DELETE: Removes all of the representation of the resource specified by the URI. Alert the user on the front end before executing delete.
 - OPTIONS: Sends the communication options for the requested resource
+
+### HTTP Responses
+
+#### Elements:
+
+- Status Code & Status Message
+- HTTP Version
+- Headers: similar to the request headers, provides information about the response and resource representation. Some common headers include:
+  - Date
+  - Content-Type: the media type of the body of the request
+- Body: optional data containing the requested resource
+
+**Codes fall into five categories**:
+1xx Informational
+2xx Success
+3xx Redirection
+4xx Client Error
+5xx Server Error
+
+**Common Codes**: --> Request type
+100: Continue --> OPTIONS
+200: OK --> GET
+201: Created --> POST
+304: Not Modified --> UNSUCCESSFUL PUT OR PATCH
+400: Bad Request --> CLIENT ERROR OR BAD REQUEST FORMATION
+401: Unauthorized --> YOU DO NOT HAVE ACCESS
+404: Not Found --> REQUEST DOES NOT EXIST IN THE BACKEND
+405: Method Not Allowed --> REQUEST METHOD USED IS NOT SUPPORTED (e.g using GET on a form that requires data be presented via POST, or PUT)
+500: Internal Server Error --> SOMETHING HAPPEN IN THE SERVER THAT WE COULD NOT PROCESS THE VALID REQUEST FROM THE SERVER
