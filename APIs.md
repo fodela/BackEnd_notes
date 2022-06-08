@@ -210,3 +210,7 @@ When organizing API endpoints, they should be based on the resources instead of 
     `https://example.com/entrees/5/reviews`
   - BAD:
     `https://example.com/entrees/5/customers/4/reviews`
+
+#### Methods & Endpoints Review
+
+The request method used will determine the operation performed for the given resource URI. Though your API documentation should explain exactly what operation is performed and data returned via the response, it should be intuitive for anyone using your API.
