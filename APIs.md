@@ -113,3 +113,14 @@ Elements:
 - HTTP Version
 - Headers: optional information, such as Accept-Language
 - Body: optional information, usually for methods such as POST and PATCH, which contain the resource being sent to the server
+
+#### HTTP Request Methods
+
+Different request methods indicate different operations to be performed. It's essential to attend to this to correctly format your requests and properly structure an API.
+
+- GET: ONLY retrieves information for the requested resource of the given URI
+- POST: Send data to the server to create a new resource.
+- PUT: Replaces all of the representation of the target resource with the request data. e.g if you only changed your name in your profile without adding a picture, PUT will delete (replace it with nothing) your picture and change your name to the newly specified one.
+- PATCH: Partially modifies the representation of the target resource with the request data. e.g It will update your name in the profile without erasing your profile picture. Best for updating the database.
+- DELETE: Removes all of the representation of the resource specified by the URI. Alert the user on the front end before executing delete.
+- OPTIONS: Sends the communication options for the requested resource
