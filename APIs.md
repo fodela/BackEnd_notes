@@ -153,3 +153,30 @@ Different request methods indicate different operations to be performed. It's es
 404: Not Found --> REQUEST DOES NOT EXIST IN THE BACKEND
 405: Method Not Allowed --> REQUEST METHOD USED IS NOT SUPPORTED (e.g using GET on a form that requires data be presented via POST, or PUT)
 500: Internal Server Error --> SOMETHING HAPPEN IN THE SERVER THAT WE COULD NOT PROCESS THE VALID REQUEST FROM THE SERVER
+
+### Testing APIs
+
+**Chrome Dev Tools**
+
+- Go to network
+
+  **Curl**
+  Curl is a library and command-line tool that completes IP transfers of data using URLs. One quick way to test your API while your API server is running is to run a curl command in another terminal window.
+  Syntax:
+
+  ```
+  curl -X POST http://www.example.com/tasks/
+  ```
+
+Options (common)
+CURL Options
+You can find more options by entering the following command in the terminal. `curl --help`
+Some frequently used options are:
+
+-X or --request COMMAND
+-d or --data DATA
+-F or --form CONTENT
+-u or --user USER[:PASSWORD]
+-H or --header LINE
+
+`curl --version`
