@@ -297,3 +297,32 @@ The @app.route decorator in addition to taking the route path, it also allows:
         something = f'do something with the passed {variable}
       return something
    ```
+
+#### Pagination in Flask
+
+When handling large collections of data, attempting to serialize and send all of that data to the frontend will slow down the response and rendering to the client.
+
+A common way to handle this issue is to paginate the data you're sending, and send it in chunks instead. Similar to variables discussed above, flask can handle request arguments to get additional request conditions such as page or search terms.
+
+1. Query Parameters
+   The below examples show the format of query parameters. When writing query parameters convention dictates that:
+
+- A question mark precedes the query parameters
+  `entrees?page=1`
+- Parameters are in key=value pairs with an equal sign in between the key and value
+  `page=1`
+  ```
+  www.example.com/entrees?page=1
+  ```
+- Sets of parameters are separated by an ampersand
+  www.example.com/entrees?page=1&allergens=peanut
+  ```
+  www.example.com/entrees?page=1&allergens=peanut
+  ```
+  1. Request Arguments
+     In flask, when a request is received with query params the route in the @app.route decorator remains the same and the request object arguments contain the parameter. You access it as shown below. `request.args` is a Python dictionary so we use the `get` method to access the value and provide a default value, in this case, 1.
+     ```
+     @app.route('/entrees', methods=['GET'])
+     def get_entrees():
+     page = request.args.get('page', 1, type=int)
+     ```
