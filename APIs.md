@@ -245,3 +245,36 @@ In order for the requests to be processed properly, CORS utilizes headers to spe
   - List of HTTP request types allowed
 - Access-Control-Allow-Headers
   - List of http request header values the server will allow, particularly useful if you use any custom headers
+
+#### Flask CORS
+
+Installation
+
+```
+python3 -m pip install flask-cors
+```
+
+Initialization
+Once Flask-CORS is installed, you simply import the CORS function and call it with your app instance as a parameter. This will initialize Flask-CORS will all default options.
+
+```
+  from flask_cors import CORS
+
+  CORS(app)
+```
+
+Resource-Specific Usage There are multiple options you can use to specify your Flask-CORS behavior. One typical one is resources, which contains a dictionary whose keys are regular expressions and values are dictionary or kwargs
+
+```
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+```
+
+Route-Specific Usage
+If you need to enable CORS on a given route, like those non-simple requests, you can use @cross_origin() to enable it.
+
+```
+@app.route("/hello")
+@cross_origin()
+def get_greeting():
+ return jsonify({'message':'Hello, World!'})
+```
