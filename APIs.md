@@ -278,3 +278,22 @@ If you need to enable CORS on a given route, like those non-simple requests, you
 def get_greeting():
  return jsonify({'message':'Hello, World!'})
 ```
+
+#### Flask Route Decorator
+
+The @app.route decorator in addition to taking the route path, it also allows:
+
+1. Variable Rules
+   In our endpoint naming scheme we follow collection/item/collection. In order to handle that variable item. In order to handle that variability in Flask, you add a` <variable_name>` within the path argument of the `@app.route` decorator, which is then passed to the function as a keyword argument variable_name.
+   You can also specify the type of the argument by using `<converter:variable_name>` syntax.
+
+2. HTTP Methods
+   By default, the @app.route decorator answers only get requests. In order to enable more request types, pass the method parameter to the decorate including a list of string methods.
+
+   ```
+    @app.route('path/<type:variable>', methods= ['GET', 'POST'])
+    def function_name('variable'):
+      if request.method == 'POST':
+        something = f'do something with the passed {variable}
+      return something
+   ```
