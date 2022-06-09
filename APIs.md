@@ -214,3 +214,21 @@ When organizing API endpoints, they should be based on the resources instead of 
 #### Methods & Endpoints Review
 
 The request method used will determine the operation performed for the given resource URI. Though your API documentation should explain exactly what operation is performed and data returned via the response, it should be intuitive for anyone using your API.
+
+#### Cross-Origin Resource Sharing CORS
+
+Allows website with different origin to share data.
+
+- 2 main components
+
+1. CORS is all about security and based on the Same Origin Policy.
+   The same-origin policy is a concept of web security that allows scripts in Webpage 1 to access data from Webpage 2 only if they share the same domain. This means that the `No 'Access-Control-Allow-Origin' header is present on the requested resource` error will be raised in the following cases:
+
+   Different domains
+   Different subdomains `(example.com and api.example.com)`
+   Different ports `(example.com and example.com:1234)`
+   Different protocols `(http://example.com and https://example.com)`
+
+This is not, however, to say that it is really an error. It is behaving exactly as it should. This policy is there to protect you and your users. For instance, attackers may embed malicious scripts in advertisements. This policy prevents those scripts from successfully making requests to your bank's website as you access the website hosting the advertisement.
+
+If you're sending any requests beyond very simple GET or POST requests, then before your actual request is sent, the browser sends a preflight OPTIONS request to the server. If CORS is not enabled, then the browser will not respond properly and the actual request will not be sent.
