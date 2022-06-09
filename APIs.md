@@ -232,3 +232,16 @@ Allows website with different origin to share data.
 This is not, however, to say that it is really an error. It is behaving exactly as it should. This policy is there to protect you and your users. For instance, attackers may embed malicious scripts in advertisements. This policy prevents those scripts from successfully making requests to your bank's website as you access the website hosting the advertisement.
 
 If you're sending any requests beyond very simple GET or POST requests, then before your actual request is sent, the browser sends a preflight OPTIONS request to the server. If CORS is not enabled, then the browser will not respond properly and the actual request will not be sent.
+
+#### CORS Headers
+
+In order for the requests to be processed properly, CORS utilizes headers to specify what the server will allow:
+
+- Access-Control-Allow-Origin
+  - What client domains can access its resources. For any domain use `*`
+- Access-Control-Allow-Credentials
+  - Only if using cookies for authentication - in which case its value must be true
+- Access-Control-Allow-Methods
+  - List of HTTP request types allowed
+- Access-Control-Allow-Headers
+  - List of http request header values the server will allow, particularly useful if you use any custom headers
