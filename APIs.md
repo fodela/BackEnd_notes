@@ -326,3 +326,16 @@ A common way to handle this issue is to paginate the data you're sending, and se
      def get_entrees():
      page = request.args.get('page', 1, type=int)
      ```
+
+#### Flask Error Handling
+
+1. Use the `@app.errorhandler` decorator which takes the error code as argument
+2. Name of the function should be logical
+3. In the body state:
+
+- success
+- status code
+- message => explain what went wrong and give direction if applicable
+
+4. Be consistent with object formatting response
+5. Pass the error code as a second argument in the returned jsonify method
