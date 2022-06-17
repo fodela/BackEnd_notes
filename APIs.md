@@ -329,7 +329,7 @@ A common way to handle this issue is to paginate the data you're sending, and se
 
 #### Flask Error Handling
 
-1. Use the `@app.errorhandler` decorator which takes the error code as argument
+1. Use the `@app.errorhandler()` decorator which takes the error code as argument
 2. Name of the function should be logical
 3. In the body state:
 
@@ -339,3 +339,81 @@ A common way to handle this issue is to paginate the data you're sending, and se
 
 4. Be consistent with object formatting response
 5. Pass the error code as a second argument in the returned jsonify method
+
+#### Testing in Flask
+
+1. Import all dependencies
+
+```
+import unittest
+import json
+flask app_folder_name import create_app
+from models import setup_db
+```
+
+2. Create class ResourceTestCase organized by resource. For example if your app has users and messages, you will likely have two test classes, UserTestCase and MethodTestCase.
+
+```
+class ResourceTestCase(unittest.TestCase):
+```
+
+3. Define a setup method.
+
+- It will be executed before each test and is where you should initialize the app and test client, as well as any other context your tests will need.
+- The Flask library provides a test client for the application, accessed as shown below.
+
+Here do the following:
+
+1.  setup the app using `create_up` method.
+2.  Then setup the test client
+3.  setup a test database so that you don't touch your production database by setting the:
+    1. database_name and
+    2. self.database_path,
+    3. call setup_db with self.app and self.database_path as parameters.
+
+```
+  def setUp(self):
+    """Define test variables and initialize app."""
+    self.app = create_app()
+    self.client = self.app.test_client
+    self.database_name = "test_db"
+    self.database_path = "postgres://{}/{}".format('localhost:5432', self.database_name)
+    setup_db(self.app, self.database_path)
+```
+
+4. Create a tearDown method
+
+- The tearDown methods close any port or clear anything that needs to be cleared after each test.
+- It runs after each test.
+- It will run as long as setUp executes successfully, regardless of test success.
+
+```
+def tearDown(self):
+  """Executed after each test"""
+  pass
+```
+
+5. Define your tests.
+
+- Write a test for each given behavior (both success and error behavior).
+  All should begin with "test\_" and include a doc string about the purpose of the test. In defining the tests, you will need to:
+  Get the response by having the client make a request
+  Use self.assertEqual to check the status code `self.assertEqual(res.status_code, 200)` and all other relevant operations.
+
+  ```
+  def test_given_behavior(self):
+    """Test _____________ """
+    res = self.client().get('/')
+
+    self.assertEqual(res.status_code, 200)
+  ```
+
+6. Run the test suite
+   Finally, to run this test, we need these final two lines. This just makes the tests conventionally executable.
+
+```
+if __name__ == "__main__":
+    unittest.main()
+```
+
+- Run python test_file_name.py from the command line.
