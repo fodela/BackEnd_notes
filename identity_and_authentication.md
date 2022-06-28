@@ -42,3 +42,13 @@ In contrast, some issues are within our control as developers:
 
 4. **Biometric Authentication**
    Biometric authentication uses a part of your body to authenticate into a system. The most commonly realized biometric authentication method is fingerprint authentication.
+
+### Third-Party Auth Systems
+
+There are risks associated with implementing the systems ourselves. Most of the risks lie in the backend and are developer risks.
+
+**Monolithic architecture** is great for smaller systems where you only have a few endpoints and a few responsibilities. But it might be overwhelming to maintain and manage when the system's complexity begins to grow. Often in a monolithic service with many responsibilities, there might be interdependencies that make it difficult to change your code. It is called technical debt that might lead to mistakes and vulnerabilities.
+
+**Microservices** take individual responsibilities and split them into smaller servers. All the systems are self-contained and minimal interaction between them is needed. But if the authentication service is embedded within each of these systems, and we change it in one system, we may have to make the change across all other systems. To solve this issue, we can create the authentication service as a microservice of its own - acting as a single self-contained system to handle everything related to authentication.
+
+A token is a credential that is temporary and allows the frontend to remember who that person is for subsequent requests.
