@@ -85,3 +85,20 @@ If the secret is not known by a third party, they cannot sign the information wi
 ### Local Storage
 
 Local Storage is an implementation of a key-value store that is accessible through a javascript interface in most modern browsers. It is a general purpose interface to store strings which will persist in memory from session to session. It is designed for smaller strings and alternative opensource systems like localForage exist for large amounts of data.
+
+### Storing JWTs
+
+There could be some time before storing and getting the JWTs. But there should not be a problem as long as the JWT has not expired between the time that it was retrieved and stored and the time it was sent to the server.
+
+To store the JWT using local storage, we use:
+
+```javascript
+jwt = response.jwt;
+localStorage.setItem("token", jwt);
+```
+
+To use the JWS, we recall it from the store:
+
+```javascript
+jwt = localStorage.getItem("token");
+```
