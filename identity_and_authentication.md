@@ -118,3 +118,58 @@ def headers():
     header_parts = auth_header.split(' ')[1]
     print(header_parts)
 ```
+
+**Validating Auth Header Formats and Defining our Decorator**
+NOTE: This step does not validate if a JWT is authentic and has not been tampered with. We'll cover those checks in Practice - Applying Skills in Flask.
+
+We can also pass a few conditions to make sure everything is valid.
+
+```python
+def get_token_auth_header():
+
+# check if authorization is not in request
+
+    if 'Authorization' not in request.headers:
+        abort(401)
+
+# get the token
+
+    auth_header = request.headers['Authorization']
+    header_parts = auth_header.split(' ')
+
+# check if token is valid
+
+    if len(header_parts) != 2:
+        abort(401)
+    elif header_parts[0].lower() != 'bearer':
+        abort(401)
+
+return header_parts[1]
+
+app = FLASK(**name**)
+
+@app.route('/headers')
+def headers():
+jwt = get_token_auth_header()
+print(jwt)
+return "not implemented"
+```
+
+To make it as a decorator, you can use the following code.
+
+```python
+from functools import wraps
+def requires_auth(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        jwt = get_token_auth_header()
+        return f(jwt, *args, **kwargs)
+    return wrapper
+
+@app.route('/headers')
+@requires_auth
+def headers(jwt):
+    print(jwt)
+    return "not implemented"
+
+```
