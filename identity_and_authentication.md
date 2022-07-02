@@ -102,3 +102,19 @@ To use the JWS, we recall it from the store:
 ```javascript
 jwt = localStorage.getItem("token");
 ```
+
+### Sending Tokens with Requests
+
+**Accessing Authorization Headers in Flask**
+
+An authorization header is a string. It includes a keyword prepended to the JWT called bearer, which indicates what type of token is included in the authentication header. It also includes the token. Bearer and token are separated by a space.
+
+To unpack an authorization header, we can add the following code to the `app.py`
+
+```python
+def headers():
+    auth_header = request.headers['Authorization']
+# get the token
+    header_parts = auth_header.split(' ')[1]
+    print(header_parts)
+```
