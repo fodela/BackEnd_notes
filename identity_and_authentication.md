@@ -173,3 +173,31 @@ def headers(jwt):
     return "not implemented"
 
 ```
+
+## Passwords
+
+### Problems with Plain Text
+
+Transmitting and storing information such as passwords in plain text is risky because this information is not guaranteed to be secret forever.
+
+There are many things that can go wrong with the information stored in a database.
+
+Bad actors
+Bad database passwords
+Bade backup security
+SQL injection
+Additionally, there are risks within the API server.
+
+Bad actors
+Bad logging
+Bad ORM/Serializers
+Plain text password also exposes us to risks for data that in-flight between services.
+
+Intercepted traffic
+"Hotel" WIFI
+Additional Reading
+Facebook. In March 2019, it was revealed that over 20,000 employees had access to plain text user passwords. Thankfully, it believed there was no malice resulting from this flub up. Read More.
+
+Large Power Utility. Discovered in February 2019. They'll conveniently even email you the plain text password. Read More
+
+The site haveibeenpwned.com has many other documented mistakes and is worth a skim.
