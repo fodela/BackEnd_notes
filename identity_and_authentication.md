@@ -216,3 +216,23 @@ An Alternative to Rate-Limiting: CAPTCHAs
 Sometimes, rate-limiting or rejecting multiple requests is not the solution. One unintended consequence, for example, would be locking a legitimate user's account because it is under attack. An alternative is something known as a CAPTCHA or "completely automated public Turing test to tell computers and humans apart". A CAPTCHA is designed to be easy for a human but difficult for a machine. In this instance, a connection is flat out rejected if a "bot" or script is attempting to gain access through multiple attempts.
 
 Until recently this was most commonly performed by asking a user to type some form of difficult to read text into an input. But, this problem is adversarial, and with advances in computer vision, these were defeated by scripts. One modern implementation of this system that can be added to your site is Google reCAPTCHA. This API produces a score from 0 to 1 of how likely the visitor is a bot based interactions with your site.
+
+### Data Handling and Logging
+
+**Serialization of Models**
+Serialization is the process of transforming a data model into a more easily shared format. For example, this is commonly performed when sending information as a response from a server to the requesting client in the form of a JSON object.
+
+**Logging Best Practices**
+Logs help us with security for many reasons.
+
+- Logging leaves a solid audit trail
+
+  - Login attempts (ids)
+  - Login sources
+  - Requested resources
+    But we should never log:
+
+- Personally identifiable information
+- Secrets
+- Passwords
+  You should consider your logs as sensitive data that should be held to the same level of security as the information you are storing in your database tables.
