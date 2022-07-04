@@ -201,3 +201,18 @@ Facebook. In March 2019, it was revealed that over 20,000 employees had access t
 Large Power Utility. Discovered in February 2019. They'll conveniently even email you the plain text password. Read More
 
 The site haveibeenpwned.com has many other documented mistakes and is worth a skim.
+
+### Brute Force Attacks
+
+In theory, a user can submit millions or thousands of login requests and they may guess the passwords correctly at some point. This attack is known as a brute force attack.
+
+We can easily mitigate brute force attacks using a few techniques:
+
+Prevent or ratelimit multiple incorrect login attempts
+Do not allow common passwords
+Enforce a reasonable password policy
+Log and monitor for attack
+An Alternative to Rate-Limiting: CAPTCHAs
+Sometimes, rate-limiting or rejecting multiple requests is not the solution. One unintended consequence, for example, would be locking a legitimate user's account because it is under attack. An alternative is something known as a CAPTCHA or "completely automated public Turing test to tell computers and humans apart". A CAPTCHA is designed to be easy for a human but difficult for a machine. In this instance, a connection is flat out rejected if a "bot" or script is attempting to gain access through multiple attempts.
+
+Until recently this was most commonly performed by asking a user to type some form of difficult to read text into an input. But, this problem is adversarial, and with advances in computer vision, these were defeated by scripts. One modern implementation of this system that can be added to your site is Google reCAPTCHA. This API produces a score from 0 to 1 of how likely the visitor is a bot based interactions with your site.
