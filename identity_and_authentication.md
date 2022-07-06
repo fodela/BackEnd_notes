@@ -90,18 +90,32 @@ Local Storage is an implementation of a key-value store that is accessible throu
 
 There could be some time before storing and getting the JWTs. But there should not be a problem as long as the JWT has not expired between the time that it was retrieved and stored and the time it was sent to the server.
 
-To store the JWT using local storage, we use:
+**To store the JWT using local storage**, we use:
 
 ```javascript
 jwt = response.jwt;
 localStorage.setItem("token", jwt);
 ```
 
-To use the JWS, we recall it from the store:
+**To use the JWS**, we recall it from the store:
 
 ```javascript
 jwt = localStorage.getItem("token");
 ```
+
+**Risks of using local storage** : Cross-Site Scripting Attacks (XSS)
+There are inherent risks associated with using local storage. For example, a malicious attack can inject foreign code into a website to execute on that website to access all of the keys within the local store and drops it into the malicious server.
+
+**How Cross-Site Scripting Attacks (XSS) are Performed and Mitigated Techniques**
+
+1. Never store sensitive info in jwt
+2. Expect jwt to be compromised and if so we can our secret or public key so it should fails future verification steps
+3. JWTs should have limited validity time. They should expire frequently so that when the attacker gets it once, he does not have it forever.
+4. **Input Sanitation**
+   Converts all input to unexecutable text there by preventing cross-site scripting attacks.
+   Input Sanitation transforms characters like `<` to `&lt`; which will not be interpreted as code and print as text (<). This step should always be performed on the server to prevent someone from sending the malicious text directly to your server using curl or Postman.
+
+5. Some care should be taken to ensure that these packages are compliant with your license and security policies and are monitored for security vulnerabilities.
 
 ### Sending Tokens with Requests
 
