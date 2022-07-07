@@ -17,3 +17,12 @@ my_arg = request.args.get("arg_name", "default_arg")
 e.g
 page = request.args.get(page, 1)
 ```
+
+**How to get data from a previously defined endpoint**
+
+```python
+    data = defined_endpoint().get_json()["data_name"]
+    # e.g
+    categories = get_all_categories().get_json()["categories"]
+
+```
