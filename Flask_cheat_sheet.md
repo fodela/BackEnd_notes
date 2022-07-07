@@ -26,3 +26,9 @@ page = request.args.get(page, 1)
     categories = get_all_categories().get_json()["categories"]
 
 ```
+
+- **Accessing Authorization Headers in Flask**
+
+```python
+auth_headers = request.headers["Authorization"]
+```
