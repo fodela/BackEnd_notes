@@ -46,3 +46,20 @@ A VM is like a complete computer, with its own copy of an operating system and v
   Each VM has a complete OS, and multiple VMs can run on the same host. The host operating system runs the VMs using a hypervisor, which is special software that creates and manages the VMs. The hypervisor maintains the isolation of the VMs with each other.
 - **How multiple containers are managed on a host machine?**
   Containers bundle together an application with its dependencies. Unlike VMs, containers do not have a separate OS or virtualized hardware. They share a single operating system kernel. In practice, the containers are managed by a container manager, which serves a role analogous to the hypervisor in a VM scenario.
+
+#### How to create VMs?
+
+If you want to create a VM (a complete computer) locally, you can use either of the following software (called Hypervisors):
+
+- Microsoft Hyper-V
+- Oracle VM VirtualBox
+- VMWare
+- Parallels Desktop
+  We will not get into the details and types of hypervisors because it is beyond this course's scope. Also, most of the cloud service providers offer you to create VM on their infrastructure, such as:
+
+- AWS EC2
+- GCP Compute Engines
+- Azure Virtual Machines
+  Creating VMs is also beyond the current course's scope, but it is important to understand the relative difference between a container and a VM.
+
+Just as with containers, a single physical machine (the host machine) can run many virtual machines to scale the number of isolated applications.
