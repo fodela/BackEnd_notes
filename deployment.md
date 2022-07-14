@@ -71,3 +71,11 @@ Earlier, we learned that a VM is like a complete computer, with its own copy of 
 #### Why containers are light-weight?
 
 Containers run on the shared host OS instead of virtualizing an entire OS and hardware. Containers share the operating system kernel and partitioning the operating system’s resources. There are no virtual operating systems or virtual hardware in the container model, which reduces the total resources needed to run them.
+
+#### Summary: Benefits of using Containers versus VMs
+
+There are several benefits of using Containers over VMs:
+
+Size: Containers are much smaller than Virtual Machines (VM) and run as isolated processes versus virtualized hardware. VMs can be in GBs while containers are in MBs.
+Speed: Virtual Machines can be slow to boot and take minutes to launch. A container can spawn much more quickly typically in seconds.
+Composability: Containers are designed to be programmatically built and are defined as source code. Virtual Machines are often replicas of a conventional computer system.
