@@ -63,3 +63,7 @@ If you want to create a VM (a complete computer) locally, you can use either of 
   Creating VMs is also beyond the current course's scope, but it is important to understand the relative difference between a container and a VM.
 
 Just as with containers, a single physical machine (the host machine) can run many virtual machines to scale the number of isolated applications.
+
+#### Problem with VMs
+
+Earlier, we learned that a VM is like a complete computer, with its own copy of an operating system and virtual hardware. While virtual machines work well for scaling applications, they can be resource-intensive since they virtualize an entire machine. This is where containers can be an improvement when you want to scale up your application.
