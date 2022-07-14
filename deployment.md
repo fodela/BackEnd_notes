@@ -35,3 +35,14 @@ OS level virtualization allows us to run multiple isolated processes in parallel
 - Rkt - An application container engine developed for modern production cloud-native environments
 - LXC and LXD - A distro and vendor-neutral environment for the development of Linux container technologies
   Docker is the most popular one and hence, in this course, you will learn to create containers using the Docker engine.
+
+### Containers vs VMs
+
+#### What is a VM?
+
+A VM is like a complete computer, with its own copy of an operating system and virtual hardware. Just as with containers, a single physical machine (the host machine) can run many virtual machines to scale the number of isolated applications. While virtual machines work well for scaling applications, since they virtualize an entire machine, they can be resource-intensive. This is where containers can be an improvement.
+
+- **How multiple VMs are managed on a host machine?**
+  Each VM has a complete OS, and multiple VMs can run on the same host. The host operating system runs the VMs using a hypervisor, which is special software that creates and manages the VMs. The hypervisor maintains the isolation of the VMs with each other.
+- **How multiple containers are managed on a host machine?**
+  Containers bundle together an application with its dependencies. Unlike VMs, containers do not have a separate OS or virtualized hardware. They share a single operating system kernel. In practice, the containers are managed by a container manager, which serves a role analogous to the hypervisor in a VM scenario.
