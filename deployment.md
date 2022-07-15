@@ -77,5 +77,11 @@ Containers run on the shared host OS instead of virtualizing an entire OS and ha
 There are several benefits of using Containers over VMs:
 
 Size: Containers are much smaller than Virtual Machines (VM) and run as isolated processes versus virtualized hardware. VMs can be in GBs while containers are in MBs.
+
 Speed: Virtual Machines can be slow to boot and take minutes to launch. A container can spawn much more quickly typically in seconds.
+
 Composability: Containers are designed to be programmatically built and are defined as source code. Virtual Machines are often replicas of a conventional computer system.
+
+### Docker
+
+Docker is the most popular open-sourced container runtime tool that helps to build, test, and run containers. It is both a container system and a company.
