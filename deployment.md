@@ -38,6 +38,8 @@ OS level virtualization allows us to run multiple isolated processes in parallel
 
 ### Containers vs VMs
 
+![container vs VM image](https://video.udacity-data.com/topher/2019/July/5d407a8f_image2/image2.png)
+
 #### What is a VM?
 
 A VM is like a complete computer, with its own copy of an operating system and virtual hardware. Just as with containers, a single physical machine (the host machine) can run many virtual machines to scale the number of isolated applications. While virtual machines work well for scaling applications, since they virtualize an entire machine, they can be resource-intensive. This is where containers can be an improvement.
@@ -85,3 +87,12 @@ Composability: Containers are designed to be programmatically built and are defi
 ### Docker
 
 Docker is the most popular open-sourced container runtime tool that helps to build, test, and run containers. It is both a container system and a company.
+
+### Docker Engine
+
+Docker Engine is an application that consists of a daemon, an API, and a client:
+
+- The Docker daemon is a server that manages the images, containers, networks, and volumes.
+- The Docker client is the user interface for Docker. The client is a CLI, so most of the work you do with Docker will take place at the command line.
+
+The client communicates with the daemon through the command line API as shown in the image below. You will be using the Docker Engine to create and run containers, so if you have not installed Docker using the links above, please be sure to do so.
