@@ -109,3 +109,7 @@ You will be able to see this structure more clearly when you create Dockerfiles 
 #### Docker Container
 
 You have already been introduced to containers, and a Docker container is just the Docker-specific implementation of the concept. In practice, Docker containers are created from Docker images - a container is a runnable instance of an image. Note that since the image is a set of instructions for creating a container, multiple containers can be created from the same image.
+
+#### Docker Registry
+
+Docker images can be stored and distributed using a Docker registry. In the next classroom concept, you will download and run an image from DockerHub, which is a free registry with many images you can use.
