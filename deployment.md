@@ -119,3 +119,31 @@ Docker images can be stored and distributed using a Docker registry.
 DockerHub is the world’s largest registry of Docker images with more than 100,000 images available. DockerHub is the default registry for Docker. It contains images ready to run a great variety of applications.
 
 On DockerHub, you will find images designed to run many different applications and languages. These images can be used as they are, or as you shall see in the next section, as the base for designing your own images.
+
+e.g postgres
+
+1. **Fetch image**
+   `docker pull postgres:latest`
+
+2. **Create and run a container**
+
+```
+docker run --name psql -e POSTGRES_PASSWORD=password! -p 5433:5432 -d postgres:latest
+```
+
+3. **Connect to the container**
+
+```
+psql -h 127.0.0.1 -p 5433 -U postgres
+```
+
+4. **Clean-up**
+
+```
+#List all containers
+docker ps --all
+# Stop
+docker stop <container_ID>
+# Remove
+docker container rm <container_ID>
+```
