@@ -117,3 +117,5 @@ Docker images can be stored and distributed using a Docker registry.
 ### DockerHub
 
 DockerHub is the world’s largest registry of Docker images with more than 100,000 images available. DockerHub is the default registry for Docker. It contains images ready to run a great variety of applications.
+
+On DockerHub, you will find images designed to run many different applications and languages. These images can be used as they are, or as you shall see in the next section, as the base for designing your own images.
