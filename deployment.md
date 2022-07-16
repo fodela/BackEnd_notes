@@ -112,4 +112,8 @@ You have already been introduced to containers, and a Docker container is just t
 
 #### Docker Registry
 
-Docker images can be stored and distributed using a Docker registry. In the next classroom concept, you will download and run an image from DockerHub, which is a free registry with many images you can use.
+Docker images can be stored and distributed using a Docker registry.
+
+### DockerHub
+
+DockerHub is the world’s largest registry of Docker images with more than 100,000 images available. DockerHub is the default registry for Docker. It contains images ready to run a great variety of applications.
