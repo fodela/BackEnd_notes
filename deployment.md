@@ -147,3 +147,9 @@ docker stop <container_ID>
 # Remove
 docker container rm <container_ID>
 ```
+
+### Dockerfiles
+
+Dockerfiles are text files used to define Docker images. They contain commands used to define a source or parent image, copy files to the image, install software on the image, and define the application which will run when the image is invoked.
+
+In the next video, you will walk through an example of a basic Dockerfile, with a discussion of the commands found on each line.
