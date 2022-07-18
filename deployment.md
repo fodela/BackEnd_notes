@@ -175,3 +175,14 @@ A CI/CD pipeline is a set software deployment practice that automatically prepar
 2. **Continuous Delivery (CD)**
    Once you have compiled, tested, and built the application in a development environment, you would want to deploy the application into the production environment immediately. This automatic deployment process is referred to as Continuous Delivery (CD), which is used for small incremental/frequent releases. In this lesson, we will learn to accomplish CD using the AWS CodePipeline service.
    In general, you can visualize a CI/CD pipeline having its one end associated with a shared repository containing the application code. The other end is connected to the cloud infrastructure.
+
+### Cloud Computing Overview
+
+#### Cloud Computing
+
+Cloud Computing is the delivery of IT resources over the Internet. The cloud is like a virtual data center accessible via the Internet that allows you to manage:
+
+Storage services like databases
+Servers, compute power, networking
+Analytics, artificial intelligence, augmented reality
+Security services for data and applications
