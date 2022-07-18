@@ -153,3 +153,9 @@ docker container rm <container_ID>
 Dockerfiles are text files used to define Docker images. They contain commands used to define a source or parent image, copy files to the image, install software on the image, and define the application which will run when the image is invoked.
 
 In the next video, you will walk through an example of a basic Dockerfile, with a discussion of the commands found on each line.
+
+## Deployment
+
+#### What is Container orchestration?
+
+To manage scaling - spinning up new container instances and shutting them down as they are no longer needed - you will use a container orchestration service. In addition to the auto-scaling of containers, the orchestration service helps balance loads, check health, and manage the container’s lifecycle (instantiating, scaling on multiple hosts, configuring, networking, and much more). There are several tools for orchestrating containers, and in this course, we will focus on Kubernetes.
