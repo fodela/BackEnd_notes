@@ -192,3 +192,13 @@ Security services for data and applications
 Pay as you go - You pay only for what you use and only when your code runs.
 Autoscaling - The number of active servers can grow or shrink based on demand.
 Serverless - Allows you to write and deploy code without having to worry about the underlying infrastructure.
+
+#### Benefits of using Cloud Computing
+
+There are several benefits to the cloud.
+
+Stop guessing about capacity.
+Avoid huge capital investments up front.
+Pay for only what you use.
+Scale globally in minutes.
+Deliver faster.
