@@ -168,3 +168,10 @@ A CI/CD pipeline is a set software deployment practice that automatically prepar
 - Running tests
 - Formulating a build
 - Deploying the build to the target infrastructure (servers).
+  Generally, a pipeline works in two stages: Continuous Integration (Build) and Continuous Delivery (Deploy). Automatically building and testing your code when changes are made is called Continuous Integration (CI). Continuous integration combined with automated deployment is referred to as Continuous Delivery (CD). Let's have a look at the quick definitions:
+
+1. **Continuous Integration (CI)**
+   There are many tools available in the industry to accomplish Continuous Integration, i.e., automated compile, test, and build processes. All these actions are performed separately from the production environment. In this lesson, we will learn to develop CI using the AWS CodeBuild service. Jenkins is another tool that is very popular for CI.
+2. **Continuous Delivery (CD)**
+   Once you have compiled, tested, and built the application in a development environment, you would want to deploy the application into the production environment immediately. This automatic deployment process is referred to as Continuous Delivery (CD), which is used for small incremental/frequent releases. In this lesson, we will learn to accomplish CD using the AWS CodePipeline service.
+   In general, you can visualize a CI/CD pipeline having its one end associated with a shared repository containing the application code. The other end is connected to the cloud infrastructure.
