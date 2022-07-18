@@ -218,3 +218,7 @@ Infrastructure-as-a-Service (IaaS): The provider supplies virtual server instanc
 Platform-as-a-Service (PaaS): A platform of development tools hosted on a provider's infrastructure.
 
 Software-as-a-Service (SaaS): A software application that runs over the Internet and is managed by the service provider.
+
+#### Amazon Web Services (AWS) is a Market Leader
+
+There are several popular cloud platforms like AWS, Azure, and GCP; however, Amazon Web Services (AWS) is one of the popular public cloud infrastructures. AWS routinely adds new services and invests billions of dollars in the overall platform and infrastructure.
