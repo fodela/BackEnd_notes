@@ -273,3 +273,14 @@ Amazon Web Services offers a broad set of global cloud-based products.
   - Computer Vision
   - Internet of Things (IoT)
   - AR/VR
+
+### Overview of AWS
+
+#### S3 Bucket
+
+**S3** => Simple Storage Service
+![aws_s3](aws_s3.png)
+
+S3 is a file storage system on the cloud where you can upload all kinds of data.
+This files will be created as individual objects. The uploaded file get a unique id that can be used to access it.
+The image above can be found at [https://aws.amazon.com/s3/](https://aws.amazon.com/s3/)
