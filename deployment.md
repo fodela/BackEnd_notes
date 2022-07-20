@@ -288,3 +288,7 @@ The image above can be found at [https://aws.amazon.com/s3/](https://aws.amazon.
 #### Elastic Cloud Compute
 
 Elastic Cloud Compute or EC2 is a foundational piece of AWS' cloud computing platform and is a service that provides servers for rent in the cloud.
+
+#### Identity & Access Management (IAM)
+
+IAM is an AWS service that allows us to configure who can access our AWS account, AWS services, or even applications running in our account. IAM is a global service and is automatically available across all AWS regions.
