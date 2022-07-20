@@ -284,3 +284,7 @@ Amazon Web Services offers a broad set of global cloud-based products.
 S3 is a file storage system on the cloud where you can upload all kinds of data.
 This files will be created as individual objects. The uploaded file get a unique id that can be used to access it.
 The image above can be found at [https://aws.amazon.com/s3/](https://aws.amazon.com/s3/)
+
+#### Elastic Cloud Compute
+
+Elastic Cloud Compute or EC2 is a foundational piece of AWS' cloud computing platform and is a service that provides servers for rent in the cloud.
