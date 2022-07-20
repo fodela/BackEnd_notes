@@ -304,3 +304,31 @@ IAM is an AWS service that allows us to configure who can access our AWS account
 
 Difference between an IAM role and an IAM user
 An IAM user has permanent credentials that can be used to interact with AWS services directly. In contrast, an IAM role does not have any credentials; hence it cannot make direct requests to AWS services. IAM roles are assumed by authorized entities, such as IAM users, applications, or other AWS services.
+
+4. IAM Policy
+   An access control policy is a JSON file that defines the resource to grant access, level of access, and allowed actions. In simple words, a policy defines the permissions to access a resource. You can attach a policy to multiple users, groups, or roles to assign permissions to AWS resources.
+
+AWS offers predefined policies that are managed by AWS. You can even create, save, and attach custom policies, as shown below
+
+![Screenshot showing creating a custom policy in the AWS web console](https://video.udacity-data.com/topher/2021/January/5ff5b2d0_screenshot-2021-01-06-at-6.08.07-pm/screenshot-2021-01-06-at-6.08.07-pm.png)
+Create a custom policy using either a visual or a JSON editor
+
+See a sample IAM policy that allows full EC2 access within a specific AWS region. Notice the fields that are used to define the policy: Action, Resource, Effect, and Condition.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "ec2:*",
+            "Resource": "*",
+            "Effect": "Allow",
+            "Condition": {
+                "StringEquals": {
+                    "ec2:Region": "us-east-1"
+                }
+            }
+        }
+    ]
+}
+```
