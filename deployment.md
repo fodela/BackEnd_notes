@@ -332,3 +332,15 @@ See a sample IAM policy that allows full EC2 access within a specific AWS region
     ]
 }
 ```
+
+#### Modes of interaction with AWS?
+
+Before we dig deeper into the AWS services, you need to know that you can create resources on the AWS cloud and interact with them (any AWS service) using either of the following modes:
+
+| Mode of Interaction                       | Description                                                                                                                                 |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web Console                               | It is a simple browser-based GUI                                                                                                            |
+| Command Line Tool (CLI)                   | It is a command-line utility to create and manage your AWS resources                                                                        |
+| Integrated Development Environment (IDEs) | You can interact with AWS using the selected IDEs, in the language of your choice. It supports Java, JavaScript, Python, Go, and a few more |
+| Software Development Kit (SDK)            | You can code with language-specific abstracted APIs for AWS services                                                                        |
+| Infrastructure as Code (IaC)              | You can define cloud infrastructure using YAML or JSON scripts                                                                              |
