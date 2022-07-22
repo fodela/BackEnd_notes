@@ -363,3 +363,22 @@ Updates - Assume you have manually scaled up your containers horizontally on mul
 Elasticity - Your local computer/on-premise servers may not suffice the hardware requirements for running too many containers parallelly.
 
 The solution to auto-scaling problems #1 and #2 above is to use the Kubernetes. The solution to problem #3 above is to use elastic (unlimited) resources on the cloud.
+
+#### What is Kubernetes?
+
+Kubernetes is one of the most popular orchestration system for containers developed by Google and open sourced in 2014. It can automate many of the manual operations of deployment and scaling of a containerized application. A few of the benefits of using Kubernetes (k8s) are:
+
+The ease of scaling the container instances up or down to meet varying demands (horizontal scaling).
+It can balance loads, and perform health checks.
+It helps in setting-up inter-container communication (networking).
+Kubernetes was born out of the lessons learned in the Scaling containerized apps at Google.
+
+Benefits of using Kubernetes
+A few more benefits of using Kubernetes are:
+
+High availability architecture
+Auto-scaling
+Rich Ecosystem
+Service discovery
+Container health management
+Secrets and configuration management The downside of these features is the high complexity and learning curve of Kubernetes.
