@@ -344,3 +344,22 @@ Before we dig deeper into the AWS services, you need to know that you can create
 | Integrated Development Environment (IDEs) | You can interact with AWS using the selected IDEs, in the language of your choice. It supports Java, JavaScript, Python, Go, and a few more |
 | Software Development Kit (SDK)            | You can code with language-specific abstracted APIs for AWS services                                                                        |
 | Infrastructure as Code (IaC)              | You can define cloud infrastructure using YAML or JSON scripts                                                                              |
+
+### Kubernets
+
+1. **Vertical scaling** Increasing the host machine's hardware resources on which the container is running is called vertical scaling. Earlier, we learned that a container has no resource constraints and can use as much of a given resource as the host's kernel scheduler allows. This approach's downside is that
+   It is challenging to scale up-or-down as the demand changes automatically.
+   Larger host machines can be more expensive than smaller machines, so it is a loss if the machine is underutilized. Also, running an application in a single container alone doesn’t leverage the full power of containerization.
+
+2. **Horizontal scaling** Running multiple instances of the same application across multiple machines is called horizontal scaling. It is effortless to run multiple containers based on the same image.
+
+Why is Kubernetes required?
+In the last lesson, you learned to containerize your application. The containers that you created were running locally on your machine. There are limitations to containerizing applications locally, such as:
+
+Scaling - You cannot automatically scale up-or-down the resources (number of containers) or application usage requirements based on the incoming traffic.
+
+Updates - Assume you have manually scaled up your containers horizontally on multiple hosts. Now, develop a patch/update in your application. It will be difficult for you to update the patch in each container manually.
+
+Elasticity - Your local computer/on-premise servers may not suffice the hardware requirements for running too many containers parallelly.
+
+The solution to auto-scaling problems #1 and #2 above is to use the Kubernetes. The solution to problem #3 above is to use elastic (unlimited) resources on the cloud.
