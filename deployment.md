@@ -401,3 +401,11 @@ Nodes: The machines in a cluster. These can be virtual, physical, or a combinati
    A given node can host multiple PODs.
 3. The PODs (a logical group of containers) are running independent modules of an application. In the last lesson, it was a single container running a module.
 4. The PODs are replicated across multiple nodes.
+
+**Reliability**
+In the cluster diagram shown above, each POD runs a specific module (App A, App B, App C...) of an application. Moreover, the PODs are not attached to a specific node (host). Instead, multiple nodes are hosting similar PODs. This architecture mitigates the chances of a single point of failure, and thus provides high availability. The master system brings a layer of abstraction for the external client/application.
+
+**Service and Volumes**
+All pods that are running the same application module share storage resources. Further, all the containers within a pod share the namespaces and filesystem volumes. Hence, in order to have a persistent way to store data, volumes can be attached to pods.
+
+Whereas, in order to have a persistent way to communicate with ephemeral pods, a higher-level service abstraction is provided, called Kubernetes Service.
