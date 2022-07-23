@@ -382,3 +382,13 @@ Rich Ecosystem
 Service discovery
 Container health management
 Secrets and configuration management The downside of these features is the high complexity and learning curve of Kubernetes.
+
+#### Kubernets concepts
+
+- Cluster: A group of machines running Kubernetes
+
+- Master: The system which controls a Kubernetes cluster. You will typically interact with the master when you communicate with a cluster. The master includes an api, scheduler, and management daemon.
+
+Nodes: The machines in a cluster. These can be virtual, physical, or a combination of both.
+
+- Pods: It is considered as the smallest unit in a cluster. It is a logical group of containers on a node that runs a particular module/application. A pod consists of one or more containers, shared storage resources, and a unique IP address. Note that all the containers within a Pod share the namespaces and filesystem volumes. Pods are not persistent, and may be brought up and down by the master during scaling.
