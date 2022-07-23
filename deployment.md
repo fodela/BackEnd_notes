@@ -392,3 +392,12 @@ Secrets and configuration management The downside of these features is the high 
 Nodes: The machines in a cluster. These can be virtual, physical, or a combination of both.
 
 - Pods: It is considered as the smallest unit in a cluster. It is a logical group of containers on a node that runs a particular module/application. A pod consists of one or more containers, shared storage resources, and a unique IP address. Note that all the containers within a Pod share the namespaces and filesystem volumes. Pods are not persistent, and may be brought up and down by the master during scaling.
+
+#### Kubernetes Cluster Architecture
+
+1. The core of Kubernetes is the cluster. A cluster comprises several node machines for running containerized applications and a master for managing the nodes. Each node is capable of running multiple pods (a group of containers). Therefore, each node has a container runtime, such as Docker, installed on it.
+
+2. Nodes are managed by the Master system. Each node in the cluster must have a container runtime, such as Docker.
+   A given node can host multiple PODs.
+3. The PODs (a logical group of containers) are running independent modules of an application. In the last lesson, it was a single container running a module.
+4. The PODs are replicated across multiple nodes.
