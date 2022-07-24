@@ -409,3 +409,14 @@ In the cluster diagram shown above, each POD runs a specific module (App A, App 
 All pods that are running the same application module share storage resources. Further, all the containers within a pod share the namespaces and filesystem volumes. Hence, in order to have a persistent way to store data, volumes can be attached to pods.
 
 Whereas, in order to have a persistent way to communicate with ephemeral pods, a higher-level service abstraction is provided, called Kubernetes Service.
+
+#### Amazon Elastic Kubernetes Service (EKS)
+
+It is a managed Kubernetes service, that has the following offerings:
+
+- EKS uses a control layer that runs the master nodes
+- We can specify the size, type, and count of the worker nodes
+- EKS allows auto-scaling (increasing-decreasing the worker node's count)
+- EKS takes care of the automated back-ups, maintenance, and availability of the cluster
+- Secure networks are set up automatically
+- You only set up Nodes, Pods, and Services
