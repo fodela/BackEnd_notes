@@ -420,3 +420,13 @@ It is a managed Kubernetes service, that has the following offerings:
 - EKS takes care of the automated back-ups, maintenance, and availability of the cluster
 - Secure networks are set up automatically
 - You only set up Nodes, Pods, and Services
+
+#### AWS CloudFormation
+
+CloudFormation is a tool for creating, managing, configuring, and deploying cloud resources. Like any other AWS service, CloudFormation can be used via either the CLI or web-console.
+
+This tool is particularly beneficial if you have to provision a set of cloud resources multiple times, at scale. You can do so by simply writing (YAML or JSON) scripts that you can easily edit and run numerous times.
+
+The (JSON or YAML) script file is also called the CloudFormation template.
+In the script, we mention each resource's necessary configuration that we want to provision and then use either the CLI commands or web-console to execute the scripts.
+You can still individually manage AWS resources that are part of a CloudFormation stac
