@@ -427,6 +427,34 @@ CloudFormation is a tool for creating, managing, configuring, and deploying clou
 
 This tool is particularly beneficial if you have to provision a set of cloud resources multiple times, at scale. You can do so by simply writing (YAML or JSON) scripts that you can easily edit and run numerous times.
 
-The (JSON or YAML) script file is also called the CloudFormation template.
-In the script, we mention each resource's necessary configuration that we want to provision and then use either the CLI commands or web-console to execute the scripts.
-You can still individually manage AWS resources that are part of a CloudFormation stac
+- The (JSON or YAML) script file is also called the CloudFormation template.
+- In the script, we mention each resource's necessary configuration that we want to provision and then use either the CLI commands or web-console to execute the scripts.
+- You can still individually manage AWS resources that are part of a - CloudFormation stack.
+
+#### What is a CloudFormation template?
+
+It is a YAML or JSON script that defines the collection of AWS resources that you want to create in just one command. Defining a particular resource means declaring the
+
+- name of the resource,
+- type of resource, and
+- assigning the necessary properties.
+  Of course, the properties of a resource vary from one type to another, for example, the properties of an IAM role will be different from an S3 bucket. Let's see an example CloudFormation template below that is defining a VPC with a 10.0.0.0/16 block (i.e., a virtual network with 65,536 private IP addresses):
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: Udacity - This template deploys a VPC
+Resources:
+  myUdacityVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: 'true'
+
+```
+
+The template above is defining the following:
+
+- default template format, as `2010-09-09`
+- name of the resource, as `myUdacityVPC`
+- type of resource, as `'AWS::EC2::VPC'`
+- Property fields, such as `CidrBlock`, and `EnableDnsHostnames`
