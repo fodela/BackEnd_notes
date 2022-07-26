@@ -496,3 +496,19 @@ The stack is based on the template available at the path `file://myFirstTemplate
    Make it a habit to delete the cloud resources once you've finished your exercise:
 
 aws cloudformation delete-stack --stack-name myFirstTest
+
+#### Template Sections
+
+Template: It is a JSON/YAML file that provides the configuration details for building your AWS infrastructure. For each resource that you wish to provision, you write the resource type and its properties. The benefit of using the templates is that they are reusable scripts, and the changes to the cloud resources can be tracked easily.
+
+Stack: It is a logical group of related resources on AWS. It is managed as a single entity.
+
+**Template sections**
+Let’s consider another example template, mySecondTemplate.yml, given at the bottom of this page. We will create the stack first, the understand the sections in the template.
+
+Download the template, and run the command below from the same directory where you have the template downloaded.
+
+`aws cloudformation create-stack --stack-name mySecondTest --template-body file://mySecondTemplate.yml --region=us-east-1`
+The command above will create a new stack, mySecondTest, in the us-east-1 region. The stack will create all the resources as defined in the template file.
+
+Let's understand the various sections of the template. Note that all sections of a temple, except the `Resources` section, are optional. Also, the order of sections in a template does not matter, and importantly, fields in a particular section might refer to values from a previous section.
