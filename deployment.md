@@ -512,3 +512,45 @@ Download the template, and run the command below from the same directory where y
 The command above will create a new stack, mySecondTest, in the us-east-1 region. The stack will create all the resources as defined in the template file.
 
 Let's understand the various sections of the template. Note that all sections of a temple, except the `Resources` section, are optional. Also, the order of sections in a template does not matter, and importantly, fields in a particular section might refer to values from a previous section.
+
+#### Section 1: Format Version (optional)
+
+Recall that in the previous example, the first line of the template was:
+
+AWSTemplateFormatVersion: 2010-09-09
+If you don't specify this section, AWS CloudFormation will assume the latest template format version, 2010-09-09, and it is currently the only valid value.
+
+#### Section 2: Description (optional)
+
+It contains a string description of your choice. This section must always follow the template format version section. The string length can be 0 to 1024 bytes. It serves as a comment about the template.
+
+#### Section 3: Parameters (optional)
+
+You can think of "parameters" as "variables" used in the Resources or Outputs sections. The Parameters section declares the values that get substituted against the variables used in other sections. For example, in the snapshot below, the Parameters section has the following parameters:
+
+- EnvironmentName
+- VpcCIDR
+- PublicSubnet1CIDR
+- PublicSubnet2CIDR
+- PrivateSubnet1CIDR
+- PrivateSubnet2CIDR
+
+#### Section 4: Resources (required)
+
+This section is mandatory to be defined in the template. It defines the AWS resources that need to be provisioned as a part of the stack. Remember to include at least one resource (e.g., a VPC, an EC2 instance, a database) in the template, otherwise, it will give you an error when trying to run the script.
+
+Each resource can be defined with the following fields:
+
+Logical ID (Optional)
+Type
+Properties - It has further sub-fields as shown in the snapshot below. Also, the properties of a resource vary from one Type to another.
+DependsOn (Optional)
+DeletionPolicy (Optional)
+Considering our example above, it will create the following resources:
+
+one VPC
+one InternetGateway
+four subnets
+two NAT gateway
+three route-tables (each comprising a route and multiple associations)
+It's alright if you aren't familiar with all these resources and their details. The objective here is to make you familiar with the template. You can create ANY resource the same way as explained here.
