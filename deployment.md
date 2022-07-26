@@ -458,3 +458,9 @@ The template above is defining the following:
 - name of the resource, as `myUdacityVPC`
 - type of resource, as `'AWS::EC2::VPC'`
 - Property fields, such as `CidrBlock`, and `EnableDnsHostnames`
+
+#### What is a stack?
+
+When you run your CloudFormation template either using a CLI or the web-console, a group of resources gets created in the cloud. For example, the group of resources could comprise a VPC, one or more EC2 instances, S3 buckets, IAM roles, or any other AWS resource.
+
+This collection of resources that get created using a single script, is considered a one-logical entity called a stack. It means you can create, update, or delete a stack in just a single command.
