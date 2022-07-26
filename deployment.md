@@ -464,3 +464,35 @@ The template above is defining the following:
 When you run your CloudFormation template either using a CLI or the web-console, a group of resources gets created in the cloud. For example, the group of resources could comprise a VPC, one or more EC2 instances, S3 buckets, IAM roles, or any other AWS resource.
 
 This collection of resources that get created using a single script, is considered a one-logical entity called a stack. It means you can create, update, or delete a stack in just a single command.
+
+Create a stack using the CLI
+Assume that the template file name is myFirstTemplate.yml, and this file is present in your current working directory locally (or navigate to the folder where this file is present). There are three basic tasks you can do:
+
+#### Create a stack using the CLI
+
+Assume that the template file name is myFirstTemplate.yml, and this file is present in your current working directory locally (or navigate to the folder where this file is present). There are three basic tasks you can do:
+
+1. Create a new stack
+
+Run the following command in the terminal, from the same directory where you've placed your myFirstTemplate.yml file:
+
+`aws cloudformation create-stack --stack-name myFirstTest --region us-east-1 --template-body file://myFirstTemplate.yml`
+In the command above,
+
+The stack name is `myFirstTest`
+The stack will be created in the `us-east-1` region
+The stack is based on the template available at the path `file://myFirstTemplate.yml`
+
+- Update an existing stack
+  The command below will update the existing stack with the changes you have mentioned in your template file:
+
+`aws cloudformation update-stack --stack-name myFirstTest --region us-east-1 --template-body file://myFirstTemplate.yml`
+
+3. Describe an existing stack
+   aws cloudformation describe-stacks --stack-name myFirstTest
+   The command above will show all properties of all the resources in the stack.
+
+4. Delete the stack
+   Make it a habit to delete the cloud resources once you've finished your exercise:
+
+aws cloudformation delete-stack --stack-name myFirstTest
