@@ -562,3 +562,26 @@ Continuous Delivery
 - Used for small incremental releases or frequent releases
 - Automates code compilation, testing and packaging
 - May involve human QA before final release or automated release to production
+
+CodePipeline
+CodePipeline
+Continuous Delivery: Automating the preparation of code for release
+
+Continuous Delivery
+Used for small incremental releases or frequent releases
+Automates code compilation, testing and packaging
+May involve human QA before final release or automated release to production
+QUESTION 1 OF 3
+Which is an advantage of continuous delivery?
+
+Customer feedback can happen sooner if releases are more frequent
+
+CodePipeline
+
+- Controls the release process through user defined pipelines
+- Pipelines are created either through the CodePipeline console or using awscli
+- Pipelines watch a source code repository, changes to this repository trigger pipeline action
+- Pipelines are made up of stages
+- Each stage consists of one or more actions
+- There are actions to define the source repository, as well as instructions for testing, building, deploying and options for approval
+- Pipelines can be managed and viewed in the CodePipeline console
