@@ -554,3 +554,11 @@ four subnets
 two NAT gateway
 three route-tables (each comprising a route and multiple associations)
 It's alright if you aren't familiar with all these resources and their details. The objective here is to make you familiar with the template. You can create ANY resource the same way as explained here.
+
+#### CodePipeline
+
+Continuous Delivery
+
+- Used for small incremental releases or frequent releases
+- Automates code compilation, testing and packaging
+- May involve human QA before final release or automated release to production
