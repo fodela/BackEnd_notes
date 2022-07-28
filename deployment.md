@@ -564,7 +564,6 @@ Continuous Delivery
 - May involve human QA before final release or automated release to production
 
 CodePipeline
-CodePipeline
 Continuous Delivery: Automating the preparation of code for release
 
 Continuous Delivery
@@ -585,3 +584,9 @@ CodePipeline
 - Each stage consists of one or more actions
 - There are actions to define the source repository, as well as instructions for testing, building, deploying and options for approval
 - Pipelines can be managed and viewed in the CodePipeline console
+
+#### CodeBuild
+
+Continuous Integration: frequent check-ins to a central repository which trigger automated builds and tests
+CodeBuild: A fully managed continuous integration system offered by AWS
+Codebuild can be added as an action to a CodePipeline stage
