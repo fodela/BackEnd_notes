@@ -421,6 +421,11 @@ It is a managed Kubernetes service, that has the following offerings:
 - Secure networks are set up automatically
 - You only set up Nodes, Pods, and Services
 
+#### Kubernetes Components
+
+- **Worker nodes** (virtual-machines): These nodes run the containerized applications. A cluster must have at least one worker node. Each worker node hosts the pod(s), where, a pod is a logical group of running containers.
+- **A master-system:** This system manages the overall cluster. It manages load balancing, backup, replication, scheduling, and much more
+
 #### AWS CloudFormation
 
 CloudFormation is a tool for creating, managing, configuring, and deploying cloud resources. Like any other AWS service, CloudFormation can be used via either the CLI or web-console.
