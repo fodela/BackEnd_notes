@@ -426,6 +426,17 @@ It is a managed Kubernetes service, that has the following offerings:
 - **Worker nodes** (virtual-machines): These nodes run the containerized applications. A cluster must have at least one worker node. Each worker node hosts the pod(s), where, a pod is a logical group of running containers.
 - **A master-system:** This system manages the overall cluster. It manages load balancing, backup, replication, scheduling, and much more
 
+**What is a control plane?**
+The control plane manages the worker nodes and the Pods in the cluster. For example, it decides when to start up a new pod, or scheduling other events. It comprises the following components:
+
+1. kube-apiserver - This is the core component. It is an API server that exposes the Kubernetes API. In simple words, the kube-apiserver is the frontend for the control plane. It has two main purposes:
+   - It exposes an HTTP API that allows end-users, different parts of your cluster, and external components to communicate.
+   - It allows querying and manipulating the state of API objects (Pods, Namespaces, ConfigMaps, and Events).
+2. etcd - It is a key-value store of the cluster data.
+3. kube-scheduler - It monitors pods. It assigns a worker-node to the newly created pods.
+4. kube-controller-manager - It is an abstract layer that runs controller processes.
+5. cloud-controller-manager - It embeds cloud-specific control logic and lets you link your cluster into your cloud provider's API
+
 #### AWS CloudFormation
 
 CloudFormation is a tool for creating, managing, configuring, and deploying cloud resources. Like any other AWS service, CloudFormation can be used via either the CLI or web-console.
