@@ -437,6 +437,13 @@ The control plane manages the worker nodes and the Pods in the cluster. For exam
 4. kube-controller-manager - It is an abstract layer that runs controller processes.
 5. cloud-controller-manager - It embeds cloud-specific control logic and lets you link your cluster into your cloud provider's API
 
+**What's there in a worker node?**
+A worker node comprises of the following:
+
+1. kubelet - There should be an agent on each node that tracks that containers are running in the correct Pod. That agent is a kubelet.
+2. kube-proxy - It maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster.
+3. Container runtime - Of course, each worker-node needs a container runtime, such as Docker, contained, CRI-O, or any other to run the containers.
+
 #### AWS CloudFormation
 
 CloudFormation is a tool for creating, managing, configuring, and deploying cloud resources. Like any other AWS service, CloudFormation can be used via either the CLI or web-console.
