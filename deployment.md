@@ -410,17 +410,6 @@ All pods that are running the same application module share storage resources. F
 
 Whereas, in order to have a persistent way to communicate with ephemeral pods, a higher-level service abstraction is provided, called Kubernetes Service.
 
-#### Amazon Elastic Kubernetes Service (EKS)
-
-It is a managed Kubernetes service, that has the following offerings:
-
-- EKS uses a control layer that runs the master nodes
-- We can specify the size, type, and count of the worker nodes
-- EKS allows auto-scaling (increasing-decreasing the worker node's count)
-- EKS takes care of the automated back-ups, maintenance, and availability of the cluster
-- Secure networks are set up automatically
-- You only set up Nodes, Pods, and Services
-
 #### Kubernetes Components
 
 - **Worker nodes** (virtual-machines): These nodes run the containerized applications. A cluster must have at least one worker node. Each worker node hosts the pod(s), where, a pod is a logical group of running containers.
@@ -443,6 +432,17 @@ A worker node comprises of the following:
 1. kubelet - There should be an agent on each node that tracks that containers are running in the correct Pod. That agent is a kubelet.
 2. kube-proxy - It maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster.
 3. Container runtime - Of course, each worker-node needs a container runtime, such as Docker, contained, CRI-O, or any other to run the containers.
+
+#### Amazon Elastic Kubernetes Service (EKS)
+
+It is a managed Kubernetes service, that has the following offerings:
+
+- EKS uses a control layer that runs the master nodes
+- We can specify the size, type, and count of the worker nodes
+- EKS allows auto-scaling (increasing-decreasing the worker node's count)
+- EKS takes care of the automated back-ups, maintenance, and availability of the cluster
+- Secure networks are set up automatically
+- You only set up Nodes, Pods, and Services
 
 #### AWS CloudFormation
 
