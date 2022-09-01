@@ -613,3 +613,19 @@ CodePipeline
 Continuous Integration: frequent check-ins to a central repository which trigger automated builds and tests
 CodeBuild: A fully managed continuous integration system offered by AWS
 Codebuild can be added as an action to a CodePipeline stage
+
+## Practice or Exercise
+
+### Creating an EKS Cluster
+
+1. Create the control plane
+
+   1. Prerequisites
+      - Default VPC and subnets
+      - IAM role for the cluster
+      - IAM role for the worker nodes
+      - SSH key pair
+   2. Create an EKS Cluster
+   3. Create a Node Group
+
+1. Create the data plane
